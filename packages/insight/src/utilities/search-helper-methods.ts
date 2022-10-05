@@ -17,6 +17,20 @@ const inputTypes: InputType[] = [
     type: 'address',
     chainNetworks: [{chain: 'BCH', network: 'mainnet'}],
   },
+  // Standard GRLC
+  {
+    regexes: [/^(garlicoin:)?([a-km-zA-HJ-NP-Z1-9]{25,34})/],
+    dataIndex: 1,
+    type: 'address',
+    chainNetworks: [{ chain: 'GRLC', network: 'mainnet' }],
+  },
+  // bech32 GRLC Address
+  {
+    regexes: [/^(garlicoin:)?(grlc1[ac-hj-np-zAC-HJ-NP-Z02-9]{11,71})/],
+    dataIndex: 1,
+    type: 'address',
+    chainNetworks: [{ chain: 'GRLC', network: 'mainnet' }],
+  },
   // bech32 BTC Address
   {
     regexes: [/^(bitcoin:)?(bc1[ac-hj-np-zAC-HJ-NP-Z02-9]{11,71})/],
@@ -41,7 +55,7 @@ const inputTypes: InputType[] = [
 
   // Testnet BTC / BCH / Doge / LTC Address
   {
-    regexes: [/^(bitcoin:|bchtest:|dogecoin:|litecoin:)?([2mn][1-9A-HJ-NP-Za-km-z]{26,35})/],
+    regexes: [/^(bitcoin:|bchtest:|dogecoin:|litecoin:|garlicoin:)?([2mn][1-9A-HJ-NP-Za-km-z]{26,35})/],
     dataIndex: 2,
     type: 'address',
     chainNetworks: [
@@ -49,6 +63,7 @@ const inputTypes: InputType[] = [
       {chain: 'BCH', network: 'testnet'},
       {chain: 'DOGE', network: 'testnet'},
       {chain: 'LTC', network: 'testnet'},
+      {chain: 'GRLC', network: 'testnet'},
     ],
   },
   // Testnet BCH Address
@@ -83,10 +98,12 @@ const inputTypes: InputType[] = [
       {chain: 'BCH', network: 'mainnet'},
       {chain: 'DOGE', network: 'mainnet'},
       {chain: 'LTC', network: 'mainnet'},
+      {chain: 'GRLC', network: 'mainnet'},
       {chain: 'BTC', network: 'testnet'},
       {chain: 'BCH', network: 'testnet'},
       {chain: 'DOGE', network: 'testnet'},
       {chain: 'LTC', network: 'testnet'},
+      {chain: 'GRLC', network: 'testnet'},
     ],
   },
   // ETH block or tx
@@ -108,11 +125,13 @@ const inputTypes: InputType[] = [
       {chain: 'DOGE', network: 'mainnet'},
       {chain: 'ETH', network: 'mainnet'},
       {chain: 'LTC', network: 'mainnet'},
+      {chain: 'GRLC', network: 'mainnet'},
       {chain: 'BTC', network: 'testnet'},
       {chain: 'BCH', network: 'testnet'},
       {chain: 'DOGE', network: 'testnet'},
       {chain: 'ETH', network: 'testnet'},
       {chain: 'LTC', network: 'testnet'},
+      {chain: 'GRLC', network: 'testnet'},
     ],
   },
 ];
