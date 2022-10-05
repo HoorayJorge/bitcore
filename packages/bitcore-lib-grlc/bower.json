@@ -1,0 +1,34 @@
+{
+  "name": "garlicore-lib",
+  "main": "./garlicore-lib.min.js",
+  "version": "0.13.19",
+  "homepage": "http://github.com/HoorayJorge/garlicore-lib",
+  "authors": [
+    "BitPay, Inc."
+  ],
+  "description": "A pure, powerful core for your litecoin project.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "litecoin",
+    "litecore",
+    "bitcore",
+    "garlicore",
+    "bitcoin",
+    "garlicoin",
+    "btc",
+    "satoshi"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "CONTRIBUTING.md",
+    "gulpfile.js",
+    "lib",
+    "index.js",
+    "karma.conf.js",
+    "npm-shrinkwrap.json",
+    "test"
+  ]
+}
