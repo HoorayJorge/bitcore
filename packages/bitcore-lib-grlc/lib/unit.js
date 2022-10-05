@@ -5,7 +5,7 @@ var _ = require('lodash');
 var errors = require('./errors');
 var $ = require('./util/preconditions');
 
-var UNITS = {
+var UNITS = {// Would change to GRLC but too many problems
   'BTC'      : [1e8, 8],
   'mBTC'     : [1e5, 5],
   'uBTC'     : [1e2, 2],

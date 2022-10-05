@@ -10,8 +10,7 @@ var JSUtil = require('../util/js');
 var $ = require('../util/preconditions');
 const Network = require('../networks');
 
-var GENESIS_BITS = 0x1e0ffff0; // Regtest: 0x207fffff
-
+var GENESIS_BITS = 0x1e0ffff0; // Regtest: 0x207fffff  // Not used
 /**
  * Instantiate a BlockHeader from a Buffer, JSON object, or Object with
  * the properties of the BlockHeader
@@ -292,7 +291,7 @@ BlockHeader.prototype.validTimestamp = function validTimestamp() {
  * @returns {Boolean} - If the proof-of-work hash satisfies the target difficulty
  */
 BlockHeader.prototype.validProofOfWork = function validProofOfWork() {
-  // For Litecoin, we use the scrypt hash to calculate proof of work
+  // For Garlicoin, we use the scrypt hash to calculate proof of work
   var pow = new BN(Hash.scryptN(this.toBuffer()), 11); //TODO: Fix this
   var target = this.getTargetDifficulty();
 

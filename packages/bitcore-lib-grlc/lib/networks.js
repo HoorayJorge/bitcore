@@ -174,7 +174,6 @@ addNetwork({
   pubkeyhash: 0x6f, // 111
   privatekey: 0xef, // 239
   scripthash: 0x3a, // 58
-  scripthash2: 0xc4, // 196
   xpubkey: 0x043587cf,
   xprivkey: 0x04358394
 });
