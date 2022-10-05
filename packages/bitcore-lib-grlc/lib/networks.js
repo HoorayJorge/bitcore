@@ -191,8 +191,7 @@ var TESTNET = {
   PORT: 42075,
   NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfdd2c8f1),
   DNS_SEEDS: [
-    'testnet-seed.litecointools.com',
-    'seed-b.litecoin.loshan.co.uk'
+    'dnsseed-test.rshaw.space'
   ],
   BECH32_PREFIX: 'grlc'
 };

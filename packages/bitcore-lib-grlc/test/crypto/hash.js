@@ -145,7 +145,7 @@ describe('Hash', function() {
 
       headers.forEach(function(header, i) {
         var data = Buffer.from(header, 'hex');
-        Hash.scrypt(data).toString('hex').should.equal(hashes[i]);
+        Hash.scryptN(data).toString('hex').should.equal(hashes[i]);
       });
     });
 

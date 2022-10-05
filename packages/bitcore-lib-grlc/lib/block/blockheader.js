@@ -293,7 +293,7 @@ BlockHeader.prototype.validTimestamp = function validTimestamp() {
  */
 BlockHeader.prototype.validProofOfWork = function validProofOfWork() {
   // For Litecoin, we use the scrypt hash to calculate proof of work
-  var pow = new BN(Hash.scrypt(this.toBuffer()));
+  var pow = new BN(Hash.scryptN(this.toBuffer()), 11); //TODO: Fix this
   var target = this.getTargetDifficulty();
 
   if (pow.cmp(target) > 0) {

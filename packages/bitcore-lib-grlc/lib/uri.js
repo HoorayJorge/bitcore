@@ -7,7 +7,7 @@ var Address = require('./address');
 var Unit = require('./unit');
 
 /**
- * Litecore URI
+ * Garlicore URI
  *
  * Instantiate an URI from a garlicoin URI String or an Object. An URI instance
  * can be created with a garlicoin uri string or an object. All instances of
@@ -186,7 +186,7 @@ URI.prototype.toObject = URI.prototype.toJSON = function toObject() {
 /**
  * Will return a the string representation of the URI
  *
- * @returns {string} Litecoin URI string
+ * @returns {string} Garlicoin URI string
  */
 URI.prototype.toString = function() {
   var query = {};
@@ -214,7 +214,7 @@ URI.prototype.toString = function() {
 /**
  * Will return a string formatted for the console
  *
- * @returns {string} Litecoin URI
+ * @returns {string} Garlicoin URI
  */
 URI.prototype.inspect = function() {
   return '<URI: ' + this.toString() + '>';

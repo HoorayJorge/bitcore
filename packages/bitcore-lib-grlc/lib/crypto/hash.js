@@ -86,7 +86,7 @@ Hash.sha512hmac = function(data, key) {
 };
 
 // Litecoin Scrypt hashing
-Hash.scrypt = function(buf) {
+Hash.scryptN = function(buf, n) {
   $.checkArgument(BufferUtil.isBuffer(buf));
-  return BufferUtil.reverse(Scrypt(buf, buf, 1024, 1, 1, 32));
+  return BufferUtil.reverse(Scrypt(buf, buf, Math.pow(2, n), 1, 1, 32));
 };
