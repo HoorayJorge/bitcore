@@ -1,18 +1,3 @@
-import { BaseModule } from '..';
-import { GRLCStateProvider } from '../../providers/chain-state/grlc/grlc';
-import { VerificationPeer } from '../bitcoin/VerificationPeer';
-import { GarlicoinP2PWorker } from './p2p';
-
-export default class GRLCModule extends BaseModule {
-  constructor(services) {
-    super(services);
-    services.Libs.register('GRLC', 'bitcore-lib-grlc', 'bitcore-p2p');
-    services.P2P.register('GRLC', GarlicoinP2PWorker);
-    services.CSP.registerService('GRLC', new GRLCStateProvider());
-    services.Verification.register('GRLC', VerificationPeer);
-  }
-}
-root@master:/var/apps/bitcore/packages/bitcore-node/src/modules/garlicoin# cat p2p.ts 
 import { EventEmitter } from 'events';
 import { BitcoinBlock, BitcoinBlockStorage } from '../../models/block';
 import { Libs } from '../../providers/libs';
@@ -55,7 +40,7 @@ export class GarlicoinP2PWorker extends BitcoinP2PWorker {
     this.messages = new this.bitcoreP2p.Messages({
       // As of Litcoin Core v0.18.1, min protocolVersion is 70002
       // As of bitcore v8.x, max protocolVersion is 70011 before seeing connection errors
-      protocolVersion: 70011,
+      protocolVersion: 70017,
       network: this.bitcoreLib.Networks.get(this.network),
       Block: this.bitcoreLib.Block,
       Transaction: this.bitcoreLib.Transaction,
