@@ -44,7 +44,7 @@ var PublicKey = require('./publickey');
  *
  * @param {*} data - The encoded data in various formats
  * @param {Network|String|number=} network - The network: 'livenet' or 'testnet'
- * @param {string=} type - The type of address: 'scripthash', 'pubkeyhash', witnessscripthash or 'witnesspubkeyhash'
+ * @param {string=} type - The type of address: 'scripthash', 'pubkeyhash', 'witnessscripthash' or 'witnesspubkeyhash'
  * @param {string=} multisigType - The type of multisig: 'scripthash' or 'witnessscripthash'
  * @returns {Address} A new valid and frozen instance of an Address
  * @constructor
@@ -196,7 +196,7 @@ Address._classifyFromVersion = function(buffer) {
   } else {
 
     var pubkeyhashNetwork = Networks.get(buffer[0], 'pubkeyhash');
-    var scripthashNetwork = Networks.get(buffer[0], ['scripthash', 'scripthash2']);
+    var scripthashNetwork = Networks.get(buffer[0], 'scripthash'); // deleted scripthash2 from litecoin
 
     if (pubkeyhashNetwork) {
       version.network = pubkeyhashNetwork;

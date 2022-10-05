@@ -4,6 +4,19 @@ Create and derive extended public and private keys according to the BIP32 standa
 ## Hierarchically Derived Keys
 Litecore provides full support for [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), allowing for many key management schemas that benefit from this property. Please be sure to read and understand the basic concepts and the warnings on that BIP before using these classes.
 
+Garlicore example (because the ones below don't work)
+```javascript
+const garlicore = require('bitcore-lib-grlc');
+const hdPrivateKey = new garlicore.HDPrivateKey();
+const hdPublicKey = hdPrivateKey.hdPublicKey;
+// hdPrivateKey uses .deriveChild()
+// hdPublicKey uses .derive()
+const address1 = hdPrivateKey.deriveChild(100).privateKey.toAddress();
+const address2 = hdPublicKey.derive(100).publicKey.toAddress();
+console.log(address1.toString()); // Same address
+console.log(address2.toString()); // Same address
+```
+
 ## HDPrivateKey
 An instance of a [PrivateKey](privatekey.md) that also contains information required to derive child keys.
 

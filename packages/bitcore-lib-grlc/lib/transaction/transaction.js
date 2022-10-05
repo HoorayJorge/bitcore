@@ -70,7 +70,7 @@ Transaction.DUST_AMOUNT = 546;
 Transaction.FEE_SECURITY_MARGIN = 15;
 
 // max amount of satoshis in circulation
-Transaction.MAX_MONEY = 84000000 * 1e8; // Litecoin has 84M coins
+Transaction.MAX_MONEY = 69000000 * 1e8; // Garlicoin has 69M coins
 
 // nlocktime limit to be considered block height rather than a timestamp
 Transaction.NLOCKTIME_BLOCKHEIGHT_LIMIT = 5e8;

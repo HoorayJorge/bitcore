@@ -63,6 +63,10 @@
     {
       "name": "HoorayJorge",
       "email": "jorge@garlicoin.io"
+    },
+    {
+      "name": "MaxPuig",
+      "email": "@maxpuig"
     }
   ],
   "keywords": [
@@ -85,7 +89,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/garlicoin-project/garlicore-lib.git"
+    "url": "https://github.com/MaxPuig/bitcore-lib-grlc.git"
   },
   "browser": {
     "request": "browser-request"
